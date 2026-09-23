@@ -1,0 +1,81 @@
+School Management System (C++ OOP Practice Project and in the stage of development)
+
+A C++ Console Application built to manage school operations, including student records, user authentication with granular permissions, academic sections, and system navigation.
+
+Note: This project was developed primarily as a practice exercise to solidify Object-Oriented Programming (OOP) fundamentals in C++ and practice file handling using plain text files (.txt) as a lightweight database.
+
+🌟 Key Features & Functional Modules
+
+User Authentication & Role-Based Access Control (RBAC):
+
+User login system with username and PIN verification.
+
+Fine-grained permission management using bitwise masks (e.g., Manage Students, Section Control, User Administration).
+
+Admin account guard (prevents accidental deletion of system administrators or currently logged-in sessions).
+
+Student Management System:
+
+Full CRUD support (Create, Read, Update, Delete, Find) for student profiles.
+
+Automatic age and date of birth validation (including leap year handling).
+
+Mauritanian administrative region selection (States & Districts/Moughataa) for birth place classification.
+
+Section assignment based on educational stage (Primary, Middle, or High School).
+
+Academic Section Management:
+
+Dynamic section generation for various stages (Primary: 1AF–6AF, Middle: 1AS–4AS, High School: 5C–7A).
+
+Automated numbering and safety rules when transferring students across sections during deletions.
+
+User Management System:
+
+Add new system users with custom permission flags or full administrative access (Permissions = -1).
+
+View, update, and search active system user credentials.
+
+Flat-File System ("Database"):
+
+Persistence achieved via delimited text files (#//# delimiter).
+
+File data loaded into vectors at runtime and updated back to disk upon changes.
+
+📁 Project Structure
+
+Plaintext
+
+├── ClSchoolmanagementsystem.h / .cpp  # Core application orchestrator & main navigation menus
+
+├── Clstudent.h / .cpp                 # Student management logic & Mauritanian geographical data
+
+├── Clsection.h / .cpp                 # Academic section lifecycle management & rules logic
+
+├── Cluser.h / .cpp                    # User authentication, profiles, and bitwise permission handling
+
+🛠️ Concepts & Technical Highlights
+
+Object-Oriented Programming (OOP): Modular class separation, encapsulation, dynamic data mapping via structs, and separation of concerns.
+
+Bitwise Permissions: Utilizes bitwise OR (|) and AND (&) operations for checking user privileges against predefined permission flags.
+
+File I/O Stream Processing: Utilizes std::fstream, std::stringstream, and custom string-splitting algorithms for parsing text file records.
+
+Input Validation: Built-in safeguards against invalid dates, duplicate student identification numbers (NNI), and non-numeric inputs.
+
+🚀 How to Run?
+
+Prerequisites:
+
+C++11 or higher compatible compiler (GCC, Clang, or MSVC via Visual Studio).
+
+Compilation:
+Open a terminal in the project directory and compile using GCC/Clang:
+
+Bash
+g++ -std=c++11 ClSchoolmanagementsystem.cpp Clstudent.cpp Clsection.cpp Cluser.cpp main.cpp -o SchoolManagementSystem
+Execution:
+
+Bash
+./SchoolManagementSystem
