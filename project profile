@@ -44,13 +44,21 @@ File data loaded into vectors at runtime and updated back to disk upon changes.
 📁 Project Structure
 Plaintext
 ├── ClSchoolmanagementsystem.h / .cpp  # Core application orchestrator & main navigation menus
+
 ├── Clstudent.h / .cpp                 # Student management logic & Mauritanian geographical data
+
 ├── Clsection.h / .cpp                 # Academic section lifecycle management & rules logic
+
 ├── Cluser.h / .cpp                    # User authentication, profiles, and bitwise permission handling
+
 ├── User.txt                           # User database (text file)
+
 ├── studentdatafile.txt                # Student records database (text file)
+
 └── section.txt                        # Academic section registry (text file)
+
 🛠️ Concepts & Technical Highlights
+
 Object-Oriented Programming (OOP): Modular class separation, encapsulation, dynamic data mapping via structs, and separation of concerns.
 
 Bitwise Permissions: Utilizes bitwise OR (|) and AND (&) operations for checking user privileges against predefined permission flags.
@@ -59,7 +67,8 @@ File I/O Stream Processing: Utilizes std::fstream, std::stringstream, and custom
 
 Input Validation: Built-in safeguards against invalid dates, duplicate student identification numbers (NNI), and non-numeric inputs.
 
-🚀 How to Run
+🚀 How to Run ?
+
 Prerequisites:
 
 C++11 or higher compatible compiler (GCC, Clang, or MSVC via Visual Studio).
